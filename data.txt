@@ -1,0 +1,9 @@
+heroku create pycpbot --buildpack heroku/python
+
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-chromedriver -a pycpbot
+
+heroku buildpacks:add https://github.com/1337w0rm/heroku-buildpack-google-chrome -a pycpbot
+
+heroku git:remote -a pycpbot
+
+heroku git:remote -a [pycpbot] -r [remote] 
